@@ -24,7 +24,7 @@ contains
         character(:), allocatable   :: format
 
         open (file = file_input, encoding = E_, newunit = In)
-            recl = (LASTNAME_LEN + NAME_LEN + OTCH_LEN ) * CH_ + 1
+            recl = 1 ! (LASTNAME_LEN + NAME_LEN + OTCH_LEN ) * CH_ 
             open (file = file_data, form = 'unformatted', newunit = Out, access = 'direct', recl = recl)
                 format = '(3(a, 1x))'
                 do i = 1, SIZE_

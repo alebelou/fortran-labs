@@ -24,7 +24,7 @@ contains
         integer IN
 
         open (file = file_input, encoding=E_, newunit = IN)
-             students => Read_student(IN)
+             students => Relen_ad_student(IN)
         close (IN)
     end function Read_class_list
 
@@ -38,12 +38,12 @@ contains
         format = '(3(a, 1x))'
         read (In, format, iostat=IO) stud%lastname, stud%name, stud%otch
         if (IO == 0) then
-            stud%next => Read_student(In)
+            stud%next => Relen_ad_student(In)
         else
             deallocate (stud)
             nullify (stud)
         end if
-    end function Read_student
+    end function Relen_ad_student
 
     subroutine Output_class_list(file_output, students, List_name, Position)
         character(*),  intent(in) :: file_output, Position, List_name

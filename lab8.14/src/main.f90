@@ -1,4 +1,4 @@
-program exercise_12
+program exercise_8
     use Environment
     use maxmin 
     use minmax
@@ -25,11 +25,11 @@ program exercise_12
       write (out, "("//N//"(f6.1))") (A(i,:), i = 1, M)
       write (out, "(a, T7, ' = ', f6.2)") "Maxmin = ", f1
       write (out, "(a, T7, ' = ', f6.2)") "Minmax = ", f2
-      if( f1 == f2) then
+      if(f1 == f2) then
          write (out, "(a, T7, ' ', f6.2)") "Minmax и maxmin равны"
       else
          write (out, "(a, T7, ' ', f6.2)") "Minmax и maxmin не равны"
       end if
     close (out)
 
-end program exercise_12
+end program exercise_8
