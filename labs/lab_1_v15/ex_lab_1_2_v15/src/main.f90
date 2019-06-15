@@ -28,7 +28,7 @@ program lab_1_2_v15
     close (In)
 
     open (file=file_output, encoding=E_, newunit=Out)
-        write (Out, '(a)') "Исходный список:"
+    write (Out, '(a)') "Исходный список:"
         write (Out, format, iostat=IO) (stud_lastnames(i), stud_names(i), &
                                       stud_otch(i), i = 1, SIZE_)
     close(Out)

@@ -13,6 +13,7 @@ program exercise_6_1a
 
    sin_x = Sin_func(x)
 
+   print*,sin_x
    open (file=output_file, encoding=E_, newunit=Out)
    write (Out, '(4(a, T19, "=", e13.6/))') 'x', x, 'Sin(x)', sin_x, 'Fortran sin(x)', sin(x), 'Error', sin_x - sin(x)
    close (Out)
